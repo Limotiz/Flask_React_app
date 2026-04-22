@@ -23,7 +23,7 @@ students = [
     Student(2, "Limotiz Bill", "Cyber Security")
 ]
  #Looping
- 
+
 def find_student(student_id):
     for student in students:
         if student.id == student_id:
@@ -40,11 +40,6 @@ def create_student():
     return jsonify(new_student.to_dict()), 201
 
 # GET
-@app.route('/student')
-def fetch_student():
-    data = request.json
-    return jsonify([student.to_dict() for student in students]),200
-
 @app.route("/students/<int:student_id>", methods=["GET"])
 def fetch_student(student_id):
     student = find_student(student_id)
