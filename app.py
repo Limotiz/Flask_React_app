@@ -78,6 +78,5 @@ def delete_student(student_id):
 
     return jsonify({"message": "Student deleted successfully"}), 200
 
-
-if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+#export FLASK_APP=app.py
+#export FLASK_DEBUG=1
