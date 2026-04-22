@@ -34,7 +34,7 @@ def find_student(student_id):
 def create_student():
     data = request.json
 
-    new_student = Student(data["id"], data["name"], data["course"])
+    new_student = Student(id="id", name="name", course="course")
     students.append(new_student)
     return jsonify(new_student.to_dict()), 201
 
