@@ -6,10 +6,13 @@ app = Flask(__name__)
 # CRUD  students
 class Student:
     def __init__(self, id, name,course=None):
+
+        #stores values in the object
         self.id=id
         self.name=name
         self.course=course
 
+        # Convert objects to dictionary
     def to_dict(self):
         return {
             "id": self.id,
@@ -17,7 +20,6 @@ class Student:
             "course": self.course
         }    
 # In-memeory data
-
 students = [
     Student(1, "David Musembi", "Software Development"),
     Student(2, "Limotiz Bill", "Cyber Security")
